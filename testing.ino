@@ -1,6 +1,8 @@
+#define BLYNK_TEMPLATE_ID "TMPL6wnqoEG5W"
+#define BLYNK_TEMPLATE_NAME "FeedMe2"
+#include <WiFi.h>
+#include <Blynk.h>
 
-#define BLYNK_TEMPLATE_ID "TMPL6je4zhHYC"
-#define BLYNK_DEVICE_NAME "Monitoring DHT11"
 
 #define BLYNK_FIRMWARE_VERSION        "0.1.0"
 
@@ -10,13 +12,10 @@
 #define APP_DEBUG
 
 #include "DHT.h"
-
 #include "BlynkEdgent.h"
 
-#define DHTPIN 23
+#define DHTPIN 19
 #define DHTTYPE DHT11
-
-
 
 DHT dht(DHTPIN, DHTTYPE);
 BlynkTimer timer;
@@ -27,7 +26,7 @@ float t = 0;
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(100);
   dht.begin();
   BlynkEdgent.begin();
