@@ -3,12 +3,10 @@
 #include <WiFi.h>
 #include <Blynk.h>
 
-
 #define BLYNK_FIRMWARE_VERSION        "0.1.0"
 
 #define BLYNK_PRINT Serial
 //#define BLYNK_DEBUG
-
 #define APP_DEBUG
 
 #include "DHT.h"
