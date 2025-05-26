@@ -1,0 +1,157 @@
+#include <ESP32Servo.h>
+#include <DHT.h>
+#include <WiFi.h>
+#include <WiFiClient.h>
+#include <BlynkSimpleEsp32.h>
+
+//BLYNK
+#define BLYNK_PRINT Serial
+#define BLYNK_TEMPLATE_ID "TMPL6YoRO_kAW"
+#define BLYNK_TEMPLATE_NAME "FeedMe"
+
+char auth[] = "";
+char ssid[] = "faris";
+char pass[] = "sidoarjo";
+
+//DHT11
+#define DHTPIN 4
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+//WATER LEVEL SENSOR
+#define POWER_PIN 33
+#define SIGNAL 32
+int value = 0;
+int level = 0;
+
+//SERVO
+Servo myServo;
+const int servoPin = 25;
+
+const int minPulseWidth = 500;
+const int maxPulseWidth = 2500;
+
+// Anda harus MENGGANTI nilai-nilai ini setelah Anda mengkalibrasi sensor Anda.
+// MIN_ANALOG_VALUE: nilai saat sensor KERING TOTAL
+// MAX_ANALOG_VALUE: nilai saat sensor TERENDAM PENUH
+const int MIN_ANALOG_VALUE = 2000;
+const int MAX_ANALOG_VALUE = 1000;
+
+// Blynk & Sensor Reading Timing
+float humidity, temp;
+unsigned long previousMillis = 0;
+const long interval = 15000; // Kirim data setiap 15 detik
+
+bool isFirstConnect = true;
+
+int waterSensor() {
+  digitalWrite(POWER_PIN, HIGH);
+  delay(10);
+  value = analogRead(SIGNAL);
+  delay(10);
+  digitalWrite(POWER_PIN, LOW);
+  return value;
+}
+
+BLYNK_CONNECTED() {
+  if (isFirstConnect)
+  {
+    Blynk.syncAll();
+    isFirstConnect = false;
+  }
+}
+
+void setup() {
+  Serial.begin(9600); // Inisialisasi Serial sebelum Blynk.begin
+  Blynk.begin(auth, ssid, pass);
+
+  //ONBOARD LED
+  pinMode(2, OUTPUT);
+
+  //DHT11
+  Serial.println(F("DHT11 test!"));
+  dht.begin();
+
+  //WATER LEVEL SENSOR
+  pinMode(POWER_PIN, OUTPUT);
+  digitalWrite(POWER_PIN, LOW);
+
+  //SERVO
+  myServo.attach(servoPin, minPulseWidth, maxPulseWidth);
+  myServo.setPeriodHertz(50);
+}
+
+void loop() {
+  Blynk.run();
+  unsigned long currentMillis = millis();
+
+  if (currentMillis - previousMillis >= interval) {
+    previousMillis = currentMillis;
+
+    //DHT11
+    float h = dht.readHumidity();
+    float t = dht.readTemperature();
+    float f = dht.readTemperature(true); // Tidak digunakan, tapi tetap dibaca jika diperlukan
+
+    if (isnan(h) || isnan(t) || isnan(f)) {
+      Serial.println(F("Failed to read from DHT sensor!"));
+      digitalWrite(2, HIGH);
+      delay(200);
+      digitalWrite(2, LOW);
+      delay(200);
+      Blynk.virtualWrite(V0, "Error"); // Kirim status error ke Blynk
+      Blynk.virtualWrite(V1, "Error");
+    } else {
+      float hic = dht.computeHeatIndex(t, h, false);
+
+      Serial.print(F("Kelembaban = "));
+      Serial.print(h, 2);
+      Serial.println(F(" %"));
+
+      Serial.print(F("Temperatur = "));
+      Serial.print(t, 0);
+      Serial.println(F(" °C"));
+
+      Blynk.virtualWrite(V0, t); // Kirim Temperatur ke V0
+      Blynk.virtualWrite(V1, h); // Kirim Kelembaban ke V1
+    }
+
+    //WATER LEVEL SENSOR
+    level = waterSensor();
+    Serial.print("Nilai Mentah Sensor Air: ");
+    Serial.println(level);
+
+    int waterLevelPercent;
+
+    // Jika nilai mentah sama dengan atau di atas MIN_ANALOG_VALUE, anggap 0% air
+    // Ini mengasumsikan MIN_ANALOG_VALUE adalah nilai saat sensor kering
+    if (level >= MIN_ANALOG_VALUE) {
+      waterLevelPercent = 0;
+    } else {
+      // Jika tidak kering, lakukan pemetaan ke persentase
+      waterLevelPercent = map(level, MIN_ANALOG_VALUE, MAX_ANALOG_VALUE, 0, 100);
+      // Pastikan persentase tidak melebihi 100%
+      waterLevelPercent = constrain(waterLevelPercent, 0, 100);
+    }
+
+    Serial.print("Level Air: ");
+    Serial.print(waterLevelPercent);
+    Serial.println(" %");
+
+    Blynk.virtualWrite(V2, level);            // Kirim nilai mentah ke V2
+    Blynk.virtualWrite(V3, waterLevelPercent); // Kirim persentase ke V3
+  }
+
+  //SERVO (Servo akan bergerak terus menerus di setiap loop, terlepas dari interval sensor)
+  for (int angle = 0; angle <= 180; angle++) {
+    int pulseWidth = map(angle, 0, 180, minPulseWidth, maxPulseWidth);
+    myServo.writeMicroseconds(pulseWidth);
+    delay(15);
+  }
+
+  for (int angle = 180; angle >= 0; angle--) {
+    int pulseWidth = map(angle, 0, 180, minPulseWidth, maxPulseWidth);
+    myServo.writeMicroseconds(pulseWidth);
+    delay(15);
+  }
+}
