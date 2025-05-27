@@ -3,7 +3,6 @@
 #include <WiFi.h>
 #include <Blynk.h>
 
-
 #define BLYNK_FIRMWARE_VERSION          "0.1.0"
 
 #define BLYNK_PRINT Serial
@@ -18,7 +17,6 @@
 #define DHTTYPE DHT11
 #define POWER_PIN 17
 #define SIGNAL_PIN 36
-
 #define WATER_SENSOR_THRESHOLD 100 
 
 DHT dht(DHTPIN, DHTTYPE);
