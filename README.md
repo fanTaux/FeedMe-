@@ -45,7 +45,7 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 - **Connectivity:** WiFi
 - **Power Supply:** 5V Powerbank
 
-### Datasheet ESP32
+### ESP32 Datasheet
 
 ## System Diagram
 
