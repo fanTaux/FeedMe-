@@ -49,19 +49,21 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 ### ESP32 Datasheet
 ![FeedMe](assets/esp32v4pinout.png)
 
+### Blynk User Interface
+![FeedMe](assets/blynk.jpg)
+
 ## System Diagram
 
 1. **Block Diagram**
-
+   ![FeedMe](assets/blockdiagram.jpg)
+   
 2. **Sequence Diagram**
-
+   ![FeedMe](assets/sequencediagram.jpg)
+   
 3. **Schematic**
    ![FeedMe](assets/Schematic.jpg)
 
-## Software Installation
 
-1. **Arduino Libraries:**
-2. 
 
 ## Demo and Evaluation
 
