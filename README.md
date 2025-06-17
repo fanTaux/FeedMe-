@@ -58,8 +58,6 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 
 ## System Diagrams
 
-## System Diagrams
-
 1.  **Block Diagram**
 
     ![Block Diagram](assets/blockdiagram.jpg)
@@ -73,7 +71,11 @@ The project is focuses on IoT based for automatically feed and drink with actuat
     ![Schematic Diagram](assets/Schematic.jpg)
 
 
-## Demo and Evaluation
+### Demo and Evaluation
+
+- **Setup:** Assemble all components based on the provided schematic diagram. Once the hardware is connected, upload the source code to the ESP32 microcontroller.
+- **Demo:** The demonstration will showcase the system's core functions, including real-time temperature and water level monitoring. It will also feature the remote activation of the servo motor to dispense feed and the water pump to provide drinking water.
+- **Evaluation:** To assess performance and durability, the system will be tested in a real-world environment, such as a chicken coop. This evaluation will measure the device's robustness and effectiveness under actual operational conditions.
 
 ## Conclusion
 This IoT project can save cost, time, and effort for chicken farmers. Its automatic features can provide benefits for chicken farmers. With this product we can also bring a better life with future technology. As long as we can use this product well, we can develop chicken farming with better techniques and provide better efficiency for other activities.
