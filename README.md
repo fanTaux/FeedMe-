@@ -52,14 +52,19 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 ### Blynk User Interface
 ![FeedMe](assets/blynk.jpg)
 
-## System Diagram
+## System Diagrams
 
-1. **Block Diagram**
-   ![FeedMe](assets/blockdiagram.jpg)
-2. **Sequence Diagram**
-   ![FeedMe](assets/sequencediagram.jpg)
-3. **Schematic**
-   ![FeedMe](assets/Schematic.jpg)
+1.  **Block Diagram**
+    
+    ![Block Diagram](assets/blockdiagram.jpg)
+
+2.  **Sequence Diagram**
+    
+    ![Sequence Diagram](assets/sequencediagram.jpg)
+
+3.  **Schematic Diagram**
+    
+    ![Schematic Diagram](assets/Schematic.jpg)
 
 
 
