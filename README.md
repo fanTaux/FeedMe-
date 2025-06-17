@@ -1,5 +1,7 @@
 # FeedMe! - Automation of Animal Feed & Water Feeding for Modern Chicken Farm based on IoT
 
+![FeedMe](https://github.com/user-attachments/assets/fed6c4f2-d08b-470d-a71d-a3c96022bd6b)
+
 ## Project Domain
 The project is focuses on IoT based for automatically feed and drink with actuator and also can detect temperature in real time with sensor.
 
