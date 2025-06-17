@@ -1,5 +1,9 @@
 # FeedMe! - Automation of Animal Feed & Water Feeding for Modern Chicken Farm based on IoT
-![FeedMe](https://github.com/user-attachments/assets/fed6c4f2-d08b-470d-a71d-a3c96022bd6b)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fed6c4f2-d08b-470d-a71d-a3c96022bd6b" alt="FeedMe Project Banner" width="600">
+</p>
+
 ## Project Domain
 The project is focuses on IoT based for automatically feed and drink with actuator and also can detect temperature in real time with sensor.
 
@@ -21,7 +25,7 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 1. Feeding and watering chickens is still performed manually, requiring the farmer's constant physical presence.
 2. Farm management is inefficient in terms of time and energy due to repetitive daily tasks.
 3. The temperature inside the chicken coop is unpredictable and not consistently monitored, which can negatively affect chicken health and growth.
-   
+   
 ### Goals
 1. Automate the feeding and watering process with remote control and scheduling via a mobile app.
 2. Improve time and energy efficiency for the farmer, allowing focus on other productive activities.
@@ -47,24 +51,24 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 - **Power Supply:** 5V Powerbank
 
 ### ESP32 Datasheet
-![FeedMe](assets/esp32v4pinout.png)
+<img src="assets/esp32v4pinout.png" alt="ESP32 Pinout" width="500">
 
 ### Blynk User Interface
-![FeedMe](assets/blynk.jpg)
+<img src="assets/blynk.jpg" alt="Blynk User Interface" width="450">
 
 ## System Diagrams
 
 1.  **Block Diagram**
-    
-    ![Block Diagram](assets/blockdiagram.jpg)
+    
+    <img src="assets/blockdiagram.jpg" alt="Block Diagram" width="500">
 
 2.  **Sequence Diagram**
-    
-    ![Sequence Diagram](assets/sequencediagram.jpg)
+    
+    <img src="assets/sequencediagram.jpg" alt="Sequence Diagram" width="500">
 
 3.  **Schematic Diagram**
-    
-    ![Schematic Diagram](assets/Schematic.jpg)
+    
+    <img src="assets/Schematic.jpg" alt="Schematic Diagram" width="500">
 
 
 
