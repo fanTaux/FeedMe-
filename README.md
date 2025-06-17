@@ -40,10 +40,10 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 ### Hardware Specifications
 
 - **Microcontroller:** ESP32 DEV KIT v4
-- **Sensors:** Temperature Sensor (DHT 11)
-- **Actuators:** Servo motor (SG90) and Water pump (5V)
-- **Connectivity:**
-- **Power Supply:**
+- **Sensors:** Temperature Sensor (DHT 11) & Water Level Sensor
+- **Actuators:** Servo motor (SG90) & Waterpump (5V)
+- **Connectivity:** WiFi
+- **Power Supply:** 5V Powerbank
 
 ### Datasheet ESP32
 
