@@ -42,6 +42,7 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 - **Microcontroller:** ESP32 DEV KIT v4
 - **Sensors:** Temperature Sensor (DHT 11) & Water Level Sensor
 - **Actuators:** Servo motor (SG90) & Waterpump (5V)
+- **Switching:** Relay (5V)
 - **Connectivity:** WiFi
 - **Power Supply:** 5V Powerbank
 
