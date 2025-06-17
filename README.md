@@ -44,7 +44,7 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 - **Connectivity:**
 - **Power Supply:**
 
-## Datasheet ESP32
+### Datasheet ESP32
 
 ## System Diagram
 
