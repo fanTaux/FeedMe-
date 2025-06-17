@@ -47,7 +47,7 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 - **Power Supply:** 5V Powerbank
 
 ### ESP32 Datasheet
-![FeedMe](https://github.com/user-attachments/assets/fed6c4f2-d08b-470d-a71d-a3c96022bd6b)
+![FeedMe](assets/esp32v4pinout.png)
 
 ## System Diagram
 
