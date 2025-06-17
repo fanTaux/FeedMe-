@@ -5,13 +5,12 @@
 </p>
 
 ## Project Domain
-The project is focuses on IoT based for automatically feed and drink with actuator and also can detect temperature in real time with sensor.
+This project presents an Internet of Things (IoT) solution that automates key aspects of livestock care. It features an automated system for dispensing feed and water via actuators and integrates real-time environmental monitoring to ensure optimal temperature conditions.
 
 ## Table Of Contents
 - [Background](#background)
-- [Hardware Specifications](#hardware-specifications)
-- [System Diagram](#system-diagram)
-- [Software Installation](#software-installation)
+- [Prerequisites](#prerequisites)
+- [System Diagrams](#system-diagrams)
 - [Demo and Evaluation](#demo-and-evaluation)
 - [Conclusion](#conclusion)
 - [Team](#team)
@@ -71,18 +70,17 @@ The project is focuses on IoT based for automatically feed and drink with actuat
     ![Schematic Diagram](assets/Schematic.jpg)
 
 
-### Demo and Evaluation
+## Demo and Evaluation
+### Demo Link : https://youtu.be/uSfvWD3atIk?si=YR0Dsns08SiuMoGj
 
 - **Setup:** Assemble all components based on the provided schematic diagram. Once the hardware is connected, upload the source code to the ESP32 microcontroller.
 - **Demo:** The demonstration will showcase the system's core functions, including real-time temperature and water level monitoring. It will also feature the remote activation of the servo motor to dispense feed and the water pump to provide drinking water.
 - **Evaluation:** To assess performance and durability, the system will be tested in a real-world environment, such as a chicken coop. This evaluation will measure the device's robustness and effectiveness under actual operational conditions.
 
-https://github.com/fanTaux/FeedMe-Smart-Feeder/blob/main/assets/FeedMe!Demo.mp4
-
-### Conclusion
+## Conclusion
 This IoT project can save cost, time, and effort for chicken farmers. Its automatic features can provide benefits for chicken farmers. With this product we can also bring a better life with future technology. As long as we can use this product well, we can develop chicken farming with better techniques and provide better efficiency for other activities.
 
-### Team
+## Team
 1. Nathanael Erens Susanto  (235150300111044)
 2. Faris Arinanta           (235150300111045)
 3. Achmad Fiky Akbar        (235150301111043)
