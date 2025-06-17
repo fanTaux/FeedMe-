@@ -18,25 +18,26 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 
 
 ### Problem Statements
-1. Feeding and watering still manually
-2. Its not efficient in terms of time and energy to raise farm chickens.
-3. Unpredictable of temperature in farm chickens place.
+1. Feeding and watering chickens is still performed manually, requiring the farmer's constant physical presence.
+2. Farm management is inefficient in terms of time and energy due to repetitive daily tasks.
+3. The temperature inside the chicken coop is unpredictable and not consistently monitored, which can negatively affect chicken health and growth.
    
 ### Goals
-1. Automatically give feeding and watering with mobile from a distance.
-2. Time and energy has more save for other activities.
-3. The temperature can be monitor in real time.
+1. Automate the feeding and watering process with remote control and scheduling via a mobile app.
+2. Improve time and energy efficiency for the farmer, allowing focus on other productive activities.
+3. Enable real-time monitoring of the coop's temperature to maintain an ideal environment.
 
 ### Solution Statements
-1. 
-2. 
-3. 
+1. Build an IoT-based automatic feeding and watering system using actuators like servo motors and waterpump.
+2. Develop a mobile application to serve as a control dashboard for scheduling, manual commands, and monitoring.
+3. Integrate a temperature sensor (e.g., DHT11) to provide real-time environmental data on the mobile app.
+4. Use an ESP32 microcontroller to control the entire system, including sensors, actuators, and Wi-Fi connectivity.
 
 ---
 
 ## Prerequisites
 
-## Hardware Specifications
+### Hardware Specifications
 
 - **Microcontroller:** ESP32 DEV KIT v4
 - **Sensors:** Temperature Sensor (DHT 11)
