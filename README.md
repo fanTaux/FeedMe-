@@ -77,6 +77,8 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 - **Demo:** The demonstration will showcase the system's core functions, including real-time temperature and water level monitoring. It will also feature the remote activation of the servo motor to dispense feed and the water pump to provide drinking water.
 - **Evaluation:** To assess performance and durability, the system will be tested in a real-world environment, such as a chicken coop. This evaluation will measure the device's robustness and effectiveness under actual operational conditions.
 
+https://github.com/fanTaux/FeedMe-Smart-Feeder/blob/main/assets/FeedMe!Demo.mp4
+
 ## Conclusion
 This IoT project can save cost, time, and effort for chicken farmers. Its automatic features can provide benefits for chicken farmers. With this product we can also bring a better life with future technology. As long as we can use this product well, we can develop chicken farming with better techniques and provide better efficiency for other activities.
 
