@@ -55,7 +55,8 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 
 2. **Sequence Diagram**
 
-3. **Schematic Fritzing**
+3. **Schematic**
+   ![FeedMe](assets/Schematic.jpg)
 
 ## Software Installation
 
