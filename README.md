@@ -56,10 +56,8 @@ The project is focuses on IoT based for automatically feed and drink with actuat
 
 1. **Block Diagram**
    ![FeedMe](assets/blockdiagram.jpg)
-   
 2. **Sequence Diagram**
    ![FeedMe](assets/sequencediagram.jpg)
-   
 3. **Schematic**
    ![FeedMe](assets/Schematic.jpg)
 
